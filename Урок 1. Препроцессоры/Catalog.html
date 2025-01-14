@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Домашнее задание
+Урок 1. Препроцессоры 
+В предыдущем курсе вам удалось реализовать главную страницу интернет-магазина. Вам необходимо открыть данный проект
+Устанавливаем 3 расширения (Если вы этого не сделали на семинаре) a. Live Sass Compiler b. Sass c. Live Server
+Перевести все стили из css в SCSS
+Приступаем к созданию страницы каталога
+Не забываем, что у вас уже готова шапка сайта и подвал страницы, плюс у вас уже есть блок из 3х товаров, осталось добавить изображение и под ним описание
+Адаптив создавать не нужно, только десктопную версию  -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=LastResort&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="App/style.scss" />
+    <link rel="stylesheet" href="App/style.css" />
+
+    <title>Home Work 1</title>
+  </head>
+
+  <body>
+    <!--  header catalog -->
+    <header class="header center2">
+      <div class="header-menu center">
+        <div class="menu-left center">
+          <a href="#"><img src="./App/img/index/Logo header.png" alt="Logo header.png" /></a>
+          <button class="btn_hed-left"><img src="./App/img/index/lupa.svg" alt="lupa.svg" /></button>
+        </div>
+        <div class="menu-right">
+          <button class="btn_hed-right"><img src="./App/img/index/menu right 1-1.svg" alt="right 1-1.svg" /></button>
+          <button class="btn_hed-right"><img src="./App/img/index/menu right 1-2.svg" alt="right 1-2.svg" /></button>
+          <button class="btn_hed-right"><img src="./App/img/index/menu right 1-3.svg" alt="right 1-3.svg" /></button>
+        </div>
+      </div>
+    </header>
+    <!--   breadcrumb -->
+    <section class="breadcrumb center2">
+      <div class="breadcrumb-text center">
+        <h2 class="breadcrumb-h2">NEW ARRIVALS</h2>
+        <ul>
+          <li><a class="breadcrumb-a" href="#">HOME / </a></li>
+          <li><a class="breadcrumb-a" href="#"> MEN / </a></li>
+          <li><a class="breadcrumb-a breadcrumb-bold" href="#">NEW ARRIVALS</a></li>
+        </ul>
+      </div>
+    </section>
+    <!--  Блок Filter + Sort -->
+
+    <section class="filterSort center">
+      <div class="filter">
+        <h3>FILTER</h3>
+        <img src="./App/img/catalog/filter.svg" alt="filter.svg" />
+      </div>
+      <div class="sort">
+        <h3>TRENDING NOW</h3>
+        <img src="./App/img/catalog/sort.png" alt="sort menu.png" />
+        <h3></h3>
+        <details>
+          <summary>SIZE <img src="./App/img/catalog/sort.png" alt="sort.png" /></summary>
+
+          <div class="details__box">
+            <label <input type="checkbox">XS</label>
+          </div>
+        </details>
+        <img src="./App/img/catalog/sort.png" alt="sort menu.png" />
+
+        <h3>PRICE</h3>
+        <img src="./App/img/catalog/sort.png" alt="sort menu.png" />
+      </div>
+    </section>
+
+    <!--  Блок products -->
+    <section class="products center">
+      <div class="product-cart">
+        <div class="prod-cart">
+          <img src="./App/img/catalog/1.jpg" alt="Image 1.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="./App/img/catalog/2.jpg " alt="Image 2.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="./App/img/catalog/3.jpg" alt="Image 3.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="./App/img/catalog/4.jpg " alt="Image 4.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="./App/img/catalog/5.jpg " alt="Image 5.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="./App/img/catalog/6.jpg" alt="Image 6.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="./App/img/catalog/7.jpg " alt="Image 7.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="./App/img/catalog/8.jpg " alt="Image 8.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="./App/img/catalog/9.jpg " alt="Image 9.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- </ Блок products -->
+    <!--  Блок Pagination -->
+    <section class="pagination center">
+      <img src="./App/img/catalog/pag-right.svg" alt="pag-right.svg" />
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+      <span class="dots">.....</span>
+      <a href="#">20</a>
+
+      <img src="./App/img/catalog/pag-left.svg" alt="pag-left.svg" />
+    </section>
+    <!--  Блок Feature -->
+    <section class="feature center2">
+      <div class="feature-cart">
+        <img class="titul-img" src="./App/img/index/niz/feature - 1.svg" alt="feature - 1.svg" />
+        <h2>Free Delivery</h2>
+        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+      </div>
+      <div class="feature-cart">
+        <img src="./App/img/index/niz/feature - 2.svg" alt="feature - 2.svg" />
+        <h2>Sales & discounts</h2>
+        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+      </div>
+      <div class="feature-cart">
+        <img src="./App/img/index/niz/feature - 3.svg" alt="feature - 3.svg" />
+
+        <h2>Quality assurance</h2>
+        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+      </div>
+    </section>
+    <!-- </ Блок Feature -->
+    <!--  Блок Subscribe -->
+
+    <section class="subscribe center2">
+      <div class="subscribe-left">
+        <img src="./App/img/index/niz/Golova-madam.png" alt="Golova-babi.png" />
+        <p>"Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum"</p>
+      </div>
+      <div class="subscribe-right">
+        <div class="subscribe-right-txt">
+          <h2>SUBSCRIBE</h2>
+          <h3>FOR OUR NEWLETTER AND PROMOTION</h3>
+        </div>
+
+        <div class="subscribe-form">
+          <input class="subscribe-form__input" type="text" placeholder="Enter your email" />
+          <button class="btn-sub">Subscribe</button>
+        </div>
+      </div>
+      <div class="subscribe-fon"></div>
+    </section>
+
+    <!--  Блок Footer -->
+    <footer class="footer center2">
+      <div class="footer-left">
+        <p>© 2023 Brand All Rights Reserved.</p>
+      </div>
+      <div class="footer-right">
+        <ul>
+          <li>
+            <a href="#"><img src="./App/img/index/niz/3.svg" alt="3.svg" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./App/img/index/niz/4.svg" alt="4.svg" /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
