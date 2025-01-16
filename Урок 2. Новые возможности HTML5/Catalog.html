@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Домашнее задание
+Урок 1. Препроцессоры 
+В предыдущем курсе вам удалось реализовать главную страницу интернет-магазина. Вам необходимо открыть данный проект
+Устанавливаем 3 расширения (Если вы этого не сделали на семинаре) a. Live Sass Compiler b. Sass c. Live Server
+Перевести все стили из css в SCSS
+Приступаем к созданию страницы каталога
+Не забываем, что у вас уже готова шапка сайта и подвал страницы, плюс у вас уже есть блок из 3х товаров, осталось добавить изображение и под ним описание
+Адаптив создавать не нужно, только десктопную версию  -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=LastResort&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="App/catal-style.css" />
+
+    <title>Home Work 2</title>
+  </head>
+
+  <body>
+    <!--  header catalog -->
+    <header class="header center2">
+      <div class="top center2">
+        <div class="header-menu center">
+          <div class="menu-left center">
+            <a href="#"><img src="./App/img/index/Logo header.png" alt="Logo header.png" /></a>
+            <button class="btn_hed-left"><img src="./App/img/index/lupa.svg" alt="lupa.svg" /></button>
+          </div>
+          <div class="menu-right">
+            <button class="btn_hed-right">
+              <input id="menu-toggle" type="checkbox" />
+              <label for="menu-toggle">
+                <img src="./App/img/index/menu right menu.svg" alt="right menu.svg" />
+              </label>
+            </button>
+          </div>
+          <button class="btn_hed-right"><img src="./App/img/index/menu right 1-2.svg" alt="right 1-2.svg" /></button>
+          <button class="btn_hed-right"><img src="./App/img/index/menu right 1-3.svg" alt="right 1-3.svg" /></button>
+          <div class="menu">
+            <h2 class="menu__heading">MENU</h2>
+            <h3 class="menu__subheading">MAN</h3>
+            <ul class="menu__ul">
+              <li><a class="menu__link" href="#">T-Shirts</a></li>
+              <li><a class="menu__link" href="#">Denim</a></li>
+              <li><a class="menu__link" href="#">Bags</a></li>
+              <li><a class="menu__link" href="#">Accessories</a></li>
+            </ul>
+            <h4 class="menu__subheading">WOMAN</h4>
+            <ul class="menu__ul">
+              <li><a class="menu__link" href="#">T-Shirts</a></li>
+              <li><a class="menu__link" href="#">Shirts</a></li>
+              <li><a class="menu__link" href="#">Polos</a></li>
+              <li><a class="menu__link" href="#">Accessories</a></li>
+              <li><a class="menu__link" href="#">Jackets & Coats</a></li>
+            </ul>
+            <h5 class="menu__subheading">KIDS</h5>
+            <ul class="menu__ul">
+              <li><a class="menu__link" href="#">T-Shirts</a></li>
+              <li><a class="menu__link" href="#">Shirts</a></li>
+              <li><a class="menu__link" href="#">Polos</a></li>
+              <li><a class="menu__link" href="#">Accessories</a></li>
+              <li><a class="menu__link" href="#">Jackets & Coats</a></li>
+              <li><a class="menu__link" href="#">Bags</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- конец header catalog -->
+
+    <!--   breadcrumb -->
+    <section class="breadcrumb center2">
+      <div class="breadcrumb-text center">
+        <h2 class="breadcrumb-h2">NEW ARRIVALS</h2>
+        <ul>
+          <li><a class="breadcrumb-a" href="#">HOME / </a></li>
+          <li><a class="breadcrumb-a" href="#"> MEN / </a></li>
+          <li><a class="breadcrumb-a breadcrumb-bold" href="#">NEW ARRIVALS</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!--  Блок Filter + Sort -->
+    <section class="filterSort center">
+      <div class="filter">
+        <h3 class="filter-H3">FILTER</h3>
+        <img src="./App/img/catalog/filter.svg" alt="filter.png" class="filter-icon" />
+      </div>
+      <!--       <input id="check" type="checkbox" />
+        <label for="check">
+          <h3 class="filter-H3">FILTER</h3>
+          <img src="./App/img/catalog/filter.svg" alt="filter.png" class="filter-icon" />
+        </label>
+      </div>
+      <div class="menu-filter">
+        <h3 class="menu-filterH3">FILTER</h3>
+        <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z"
+            fill="#EF5B70"
+          />
+        </svg>
+        <div class="menu-filterSub">
+          <svg width="5" height="37" viewBox="0 0 5 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 0H0V37H5V0Z" fill="#EF5B70" />
+          </svg>
+          <h4 class="menu-filterH4">CATEGORY</h4>
+          <ul class="submenu">
+            <li><a href="#" class="submenu-link">Accessories</a></li>
+            <li><a href="#" class="submenu-link">Bags</a></li>
+            <li><a href="#" class="submenu-link">Denim</a></li>
+            <li><a href="#" class="submenu-link">Hoodies</a></li>
+            <li><a href="#" class="submenu-link">Jackets</a></li>
+            <li><a href="#" class="submenu-link">Polos</a></li>
+            <li><a href="#" class="submenu-link">Shoes</a></li>
+            <li><a href="#" class="submenu-link">Sweaters</a></li>
+            <li><a href="#" class="submenu-link">T-Shirts</a></li>
+            <li><a href="#" class="submenu-link">Tanks</a></li>
+          </ul>
+        </div>
+        <div class="menu-filterSub">
+          <svg width="5" height="37" viewBox="0 0 5 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 0H0V37H5V0Z" fill="#EF5B70" />
+          </svg>
+          <h4 class="menu-filterH4">BRAND</h4>
+        </div>
+        <div class="menu-filterSub">
+          <svg width="5" height="37" viewBox="0 0 5 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 0H0V37H5V0Z" fill="#EF5B70" />
+          </svg>
+          <h4 class="menu-filterH4">DESIGNER</h4>
+        </div>
+      </div> 
+Не удачная попытка реализации меню.
+-->
+      <div class="sort">
+        <details class="details-sort">
+          <summary class="sort-h3">
+            <span>TRENDING NOW</span>
+            <img src="./App/img/catalog/sort.png" alt="sort menu.png" />
+          </summary>
+        </details>
+        <details>
+          <summary class="sort-h3">
+            <span>SIZE</span> <img src="./App/img/catalog/sort.png" alt="sort menu.png" />
+          </summary>
+          <div class="details__box">
+            <label><input type="checkbox" /> XS </label>
+            <label><input type="checkbox" /> S </label>
+            <label><input type="checkbox" /> M </label>
+            <label><input type="checkbox" /> L </label>
+          </div>
+        </details>
+        <details>
+          <summary class="sort-h3">
+            <span>PRICE</span> <img src="./App/img/catalog/sort.png" alt="sort menu.png" />
+          </summary>
+        </details>
+      </div>
+    </section>
+    <!--  Блок Filter + Sort -->
+
+    <!--  Блок products -->
+    <section class="products center">
+      <div class="product-cart">
+        <div class="prod-cart">
+          <img src="./App/img/catalog/1.jpg" alt="Image 1.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="./App/img/catalog/2.jpg " alt="Image 2.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="./App/img/catalog/3.jpg" alt="Image 3.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="./App/img/catalog/4.jpg " alt="Image 4.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="./App/img/catalog/5.jpg " alt="Image 5.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="./App/img/catalog/6.jpg" alt="Image 6.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="./App/img/catalog/7.jpg " alt="Image 7.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="./App/img/catalog/8.jpg " alt="Image 8.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="./App/img/catalog/9.jpg " alt="Image 9.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- </ Блок products -->
+    <!--  Блок Pagination -->
+    <section class="pagination center">
+      <img src="./App/img/catalog/pag-right.svg" alt="pag-right.svg" />
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+      <span class="dots">.....</span>
+      <a href="#">20</a>
+
+      <img src="./App/img/catalog/pag-left.svg" alt="pag-left.svg" />
+    </section>
+    <!--  Блок Feature -->
+    <section class="feature center2">
+      <div class="feature-cart">
+        <img class="titul-img" src="./App/img/index/niz/feature - 1.svg" alt="feature - 1.svg" />
+        <h2>Free Delivery</h2>
+        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+      </div>
+      <div class="feature-cart">
+        <img src="./App/img/index/niz/feature - 2.svg" alt="feature - 2.svg" />
+        <h2>Sales & discounts</h2>
+        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+      </div>
+      <div class="feature-cart">
+        <img src="./App/img/index/niz/feature - 3.svg" alt="feature - 3.svg" />
+
+        <h2>Quality assurance</h2>
+        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+      </div>
+    </section>
+    <!-- </ Блок Feature -->
+    <!--  Блок Subscribe -->
+
+    <section class="subscribe center2">
+      <div class="subscribe-left">
+        <img src="./App/img/index/niz/Golova-madam.png" alt="Golova-babi.png" />
+        <p>"Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum"</p>
+      </div>
+      <div class="subscribe-right">
+        <div class="subscribe-right-txt">
+          <h2>SUBSCRIBE</h2>
+          <h3>FOR OUR NEWLETTER AND PROMOTION</h3>
+        </div>
+
+        <div class="subscribe-form">
+          <input class="subscribe-form__input" type="text" placeholder="Enter your email" />
+          <button class="btn-sub">Subscribe</button>
+        </div>
+      </div>
+      <div class="subscribe-fon"></div>
+    </section>
+
+    <!--  Блок Footer -->
+    <footer class="footer center2">
+      <div class="footer-left">
+        <p>© 2023 Brand All Rights Reserved.</p>
+      </div>
+      <div class="footer-right">
+        <ul>
+          <li>
+            <a href="#"><img src="./App/img/index/niz/3.svg" alt="3.svg" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./App/img/index/niz/4.svg" alt="4.svg" /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
