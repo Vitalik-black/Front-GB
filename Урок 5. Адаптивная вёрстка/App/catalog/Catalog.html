@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Домашнее задание -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=LastResort&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="catal-style.css" />
+
+    <title>Catalog</title>
+  </head>
+
+  <body>
+    <!--  header catalog -->
+
+    <header class="header center">
+      <div class="menu-left">
+        <a href="#"><img src="../img/Logo header.png" alt="Logo header.png" /></a>
+        <img class="btn_hed-left" src="../img/lupa.svg" alt="lupa.svg" />
+      </div>
+      <nav class="menu-center">
+        <ul>
+          <li><a href="../../index.html">Главная</a></li>
+          <li><a href="../catalog/Catalog.html">Каталог</a></li>
+          <li><a href="../prod/Product.html">Продукт</a></li>
+          <li><a href="../cart/Cart.html">Корзина</a></li>
+          <li><a href="../registr/Registr.html">Регистрация</a></li>
+        </ul>
+      </nav>
+      <div class="menu-right">
+        <button id="menu-toggle-button" class="btn-menu">
+          <img class="img-right" src="../img/menu right menu.svg" alt="right 1-1.svg" />
+        </button>
+        <img class="img-right" src="../img/menu right 1-2.svg" alt="right 1-2.svg" />
+        <img class="img-right" src="../img/menu right 1-3.svg" alt="right 1-3.svg" />
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu">
+        <h2 class="menu__heading">MENU</h2>
+        <h3 class="menu__subheading">MAN</h3>
+        <ul class="menu__ul">
+          <li>
+            <h4 class="menu__subheading-h4">Accessories</h4>
+          </li>
+          <li>
+            <h4 class="menu__subheading-h4">Bags</h4>
+          </li>
+          <li>
+            <h4 class="menu__subheading-h4">Denim</h4>
+          </li>
+          <li>
+            <h4 class="menu__subheading-h4">T-Shirts</h4>
+          </li>
+        </ul>
+        <h4 class="menu__subheading">WOMAN</h4>
+        <ul class="menu__ul">
+          <li>
+            <h4 class="menu__subheading-h4">Accessories</h4>
+          </li>
+          <li>
+            <h4 class="menu__subheading-h4">Jackets & Coats</h4>
+          </li>
+          <li>
+            <h4 class="menu__subheading-h4">Polos</h4>
+          </li>
+          <li>
+            <h4 class="menu__subheading-h4">T-Shirts</h4>
+          </li>
+          <li>
+            <h4 class="menu__subheading-h4">Shirts</h4>
+          </li>
+        </ul>
+        <h5 class="menu__subheading">KIDS</h5>
+        <ul class="menu__ul">
+          <li>
+            <h4 class="menu__subheading-h4">Accessories</h4>
+          </li>
+          <li>
+            <h4 class="menu__subheading-h4">Jackets & Coats</h4>
+          </li>
+          <li>
+            <h4 class="menu__subheading-h4">Polos</h4>
+          </li>
+          <li>
+            <h4 class="menu__subheading-h4">T-Shirts</h4>
+          </li>
+          <li>
+            <h4 class="menu__subheading-h4">Shirts</h4>
+          </li>
+          <li>
+            <h4 class="menu__subheading-h4">Bags</h4>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- конец header catalog -->
+
+    <!--   breadcrumb -->
+    <section class="breadcrumb center2">
+      <div class="breadcrumb-text center">
+        <h2 class="breadcrumb-h2">NEW ARRIVALS</h2>
+        <ul>
+          <li><a class="breadcrumb-a" href="#">HOME / </a></li>
+          <li><a class="breadcrumb-a" href="#"> MEN / </a></li>
+          <li><a class="breadcrumb-a breadcrumb-bold" href="#">NEW ARRIVALS</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!--  Блок breadcrumb каталога -->
+
+    <!--  Блок Filter + Sort -->
+
+    <section class="filterSort center">
+      <div class="filter">
+        <details class="details-filter-heder">
+          <summary class="filter-heder">
+            FILTER
+            <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z"
+                fill="#EF5B70"
+              />
+            </svg>
+          </summary>
+          <div class="filter_summary_box">
+            <details class="details">
+              <summary class="filter_summary">
+                <div class="flex-container">
+                  <svg width="5" height="37" viewBox="0 0 5 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 0H0V37H5V0Z" fill="#EF5B70" />
+                  </svg>
+                  CATEGORY
+                </div>
+              </summary>
+              <div class="filter_summary-subbox">
+                <h6 class="filter_summary_h6">Accessories</h6>
+
+                <h6 class="filter_summary_h6">Bags</h6>
+
+                <h6 class="filter_summary_h6">Hoodies &amp; Sweatshirts</h6>
+
+                <h6 class="filter_summary_h6">Jackets &amp; Coats</h6>
+
+                <h6 class="filter_summary_h6">Polos</h6>
+
+                <h6 class="filter_summary_h6">Shirts</h6>
+
+                <h6 class="filter_summary_h6">Shoes</h6>
+
+                <h6 class="filter_summary_h6">Sweaters &amp; Knits</h6>
+
+                <h6 class="filter_summary_h6">T-Shirts</h6>
+
+                <h6 class="filter_summary_h6">Tanks</h6>
+              </div>
+            </details>
+
+            <details class="details">
+              <summary class="filter_summary">
+                <div class="flex-container">
+                  <svg width="5" height="37" viewBox="0 0 5 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 0H0V37H5V0Z" fill="#EF5B70" />
+                  </svg>
+                  BRAND
+                </div>
+              </summary>
+              <div class="filter_summary-subbox">
+                <h6 class="filter_summary_h6">Accessories</h6>
+
+                <h6 class="filter_summary_h6">Bags</h6>
+
+                <h6 class="filter_summary_h6">Hoodies &amp; Sweatshirts</h6>
+
+                <h6 class="filter_summary_h6">Jackets &amp; Coats</h6>
+
+                <h6 class="filter_summary_h6">Polos</h6>
+
+                <h6 class="filter_summary_h6">Shirts</h6>
+
+                <h6 class="filter_summary_h6">Shoes</h6>
+
+                <h6 class="filter_summary_h6">Sweaters &amp; Knits</h6>
+
+                <h6 class="filter_summary_h6">T-Shirts</h6>
+
+                <h6 class="filter_summary_h6">Tanks</h6>
+              </div>
+            </details>
+
+            <details class="details">
+              <summary class="filter_summary">
+                <div class="flex-container">
+                  <svg width="5" height="37" viewBox="0 0 5 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 0H0V37H5V0Z" fill="#EF5B70" />
+                  </svg>
+                  DESIGNER
+                </div>
+              </summary>
+              <div class="filter_summary-subbox">
+                <h6 class="filter_summary_h6">Accessories</h6>
+
+                <h6 class="filter_summary_h6">Bags</h6>
+
+                <h6 class="filter_summary_h6">Hoodies &amp; Sweatshirts</h6>
+
+                <h6 class="filter_summary_h6">Jackets &amp; Coats</h6>
+
+                <h6 class="filter_summary_h6">Polos</h6>
+
+                <h6 class="filter_summary_h6">Shirts</h6>
+
+                <h6 class="filter_summary_h6">Shoes</h6>
+
+                <h6 class="filter_summary_h6">Sweaters &amp; Knits</h6>
+
+                <h6 class="filter_summary_h6">T-Shirts</h6>
+
+                <h6 class="filter_summary_h6">Tanks</h6>
+              </div>
+            </details>
+          </div>
+        </details>
+      </div>
+
+      <div class="sort">
+        <details class="details-sort">
+          <summary class="sort-summary">
+            <span>TRENDING NOW</span>
+            <img src="../img/catalog/sort.png" alt="sort menu.png" />
+          </summary>
+        </details>
+        <details class="details-sort">
+          <summary class="sort-summary" id="sizeButton">
+            <span>SIZE</span>
+            <img src="../img/catalog/sort.png" alt="sort menu.png" />
+          </summary>
+          <div class="details__box" id="sizeMenu">
+            <label><input type="checkbox" /> XS </label>
+            <label><input type="checkbox" /> S </label>
+            <label><input type="checkbox" /> M </label>
+            <label><input type="checkbox" /> L </label>
+          </div>
+        </details>
+        <details>
+          <summary class="sort-summary">
+            <span>PRICE</span>
+            <img src="../img/catalog/sort.png" alt="sort menu.png" />
+          </summary>
+        </details>
+      </div>
+    </section>
+
+    <!-- конец Блок Filter + Sort -->
+
+    <!--  Блок products -->
+    <section class="products center">
+      <div class="product-cart">
+        <div class="prod-cart">
+          <img src="../img/catalog/1.jpg" alt="Image 1.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="../img/catalog/2.jpg " alt="Image 2.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="../img/catalog/3.jpg" alt="Image 3.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="../img/catalog/4.jpg " alt="Image 4.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="../img/catalog/5.jpg " alt="Image 5.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="../img/catalog/6.jpg" alt="Image 6.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="../img/catalog/7.jpg " alt="Image 7.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="../img/catalog/8.jpg " alt="Image 8.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+        <div class="prod-cart">
+          <img src="../img/catalog/9.jpg " alt="Image 9.png " />
+          <div class="prod-cartTxt">
+            <h3>ELLERY X M'O CAPSULE</h3>
+            <p>
+              Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
+              with Moda Operandi.
+            </p>
+            <h2>$52.00</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- </ Блок products -->
+    <!--  Блок Pagination -->
+
+    <!-- Блок Pagination -->
+    <section class="pagination-container">
+      <div class="pagination">
+        <img src="../img/catalog/pag-right.svg" alt="pag-right.svg" />
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <span class="dots">.....</span>
+        <a href="#">20</a>
+        <img src="../img/catalog/pag-left.svg" alt="pag-left.svg" />
+      </div>
+    </section>
+    <!-- конец блока Pagination -->
+
+    <!--  Блок Feature -->
+    <section class="feature center2">
+      <div class="feature-cart">
+        <img class="titul-img" src="../img/index/niz/feature - 1.svg" alt="feature - 1.svg" />
+        <h2>Free Delivery</h2>
+        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+      </div>
+      <div class="feature-cart">
+        <img src="../img/index/niz/feature - 2.svg" alt="feature - 2.svg" />
+        <h2>Sales &amp; discounts</h2>
+        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+      </div>
+      <div class="feature-cart">
+        <img src="../img/index/niz/feature - 3.svg" alt="feature - 3.svg" />
+
+        <h2>Quality assurance</h2>
+        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+      </div>
+    </section>
+    <!-- </ Блок Feature -->
+    <!--  Блок Subscribe -->
+
+    <section class="subscribe center2">
+      <div class="subscribe-left">
+        <img src="../img/index/niz/Golova-madam.png" alt="Golova-babi.png" />
+        <p>"Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum"</p>
+      </div>
+      <div class="subscribe-right">
+        <div class="subscribe-right-txt">
+          <h2>SUBSCRIBE</h2>
+          <h3>FOR OUR NEWLETTER AND PROMOTION</h3>
+        </div>
+
+        <div class="subscribe-form">
+          <input class="subscribe-form__input" type="text" placeholder="Enter your email" />
+          <button class="btn-sub">Subscribe</button>
+        </div>
+      </div>
+      <div class="subscribe-fon"></div>
+    </section>
+
+    <!--  Блок Footer -->
+    <footer class="footer center2">
+      <div class="footer-left">
+        <p>2023 Brand All Rights Reserved.</p>
+      </div>
+      <div class="footer-right">
+        <ul>
+          <li>
+            <a href="#"><img src="../img/index/niz/3.svg" alt="3.svg" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="../img/index/niz/4.svg" alt="4.svg" /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./ind-script.js"></script>
+    <script src="./cat-script.js"></script>
+  </body>
+</html>
