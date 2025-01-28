@@ -1,7 +1,7 @@
-    @import "./_variables";
+    @import "../_variables";
     @font-face {
         font-family: "Lato";
-        src: url("./Lato/Lato-Black.ttf");
+        src: url(./Lato/Lato-Black.ttf);
     }
     
     // Global Styles
@@ -12,98 +12,141 @@
         padding: 0;
         text-decoration: none;
         box-sizing: border-box;
-        font-family: $main-font-stack;
-    }
-    
-    // Выравнивание по центру 
-    @mixin center-horizontally($width) {
-        width: $width;
-        margin: 0 auto;
+        font-family: "Lato", sans-serif, sans-serif;
     }
     
     .center {
-        @include center-horizontally(1140px);
+        padding-left: calc(50% - 570px);
+        padding-right: calc(50% - 570px);
     }
     
     .center2 {
-        @include center-horizontally(1600px);
+        padding-left: calc(50% - 800px);
+        padding-right: calc(50% - 800px);
     }
-    /* Style Heder Desktop */
+    /* Style Header Desktop */
     
     .header {
         position: relative;
-        background-color: $header-bg-color;
-        height: $header-height;
+        margin: 0 auto;
+        background-color: rgba(34, 34, 34, 1);
+        height: 75px;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
-    }
-    
-    .menu {
-        position: absolute;
-        top: 75px;
-        right: -270px;
-        width: 232px;
-        background: #ffffff;
-        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-        padding: 32px;
-        box-sizing: border-box;
-        transition: right 0.4s;
-        &__heading {
-            font-style: normal;
-            font-weight: 700;
-            font-size: 34px;
-            line-height: 17px;
-            color: #222222;
-            margin-bottom: 4px;
+        .menu-left {
+            display: flex;
+            gap: 41px;
+            align-items: center;
         }
-        &__subheading {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 17px;
-            color: #f16d7f;
-            margin-bottom: 12px;
-            margin-top: 20px;
+        .btn_hed-left {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            margin-left: 15px;
         }
-        &__link {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 17px;
-            color: #6F6E6E;
-            text-decoration: none;
-            &:hover {
-                color: #f16d7f;
+        .menu-center {
+            flex-grow: 1;
+            text-align: center;
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                li {
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        padding: 10px 15px;
+                        transition: background-color 0.3s;
+                        &:hover {
+                            background-color: #f16d7f;
+                        }
+                    }
+                }
             }
         }
-        &__ul {
-            list-style-type: none;
-            padding-left: 20px;
+        .menu-right {
             display: flex;
-            flex-direction: column;
-            gap: 11px;
+            justify-content: flex-end;
+            gap: 10px;
+            .img-right {
+                border: none;
+                cursor: pointer;
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
         }
     }
     
-    .header-menu {
-        display: flex;
-        align-items: center;
+    #menu-toggle-button {
+        cursor: pointer;
+        padding: 10px;
+        background-color: #222;
     }
     
-    .menu-right {
-        display: flex;
-        justify-content: flex-end;
-        gap: $menu-item-gap;
-    }
-    
-    #menu-toggle {
+    .dropdown-menu {
+        position: absolute;
+        padding: 37px 73px 32px 33px;
+        width: 232px;
+        height: 639px;
+        background-color: #ffffff;
+        top: 100%;
+        right: 252px;
         display: none;
+        z-index: 1000;
+        &.active {
+            display: block;
+        }
+        .menu__ul {
+            list-style: none;
+            li {
+                margin: 10px 0;
+                .subheading {
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #f16d7f;
+                    background-color: #3f3dba;
+                    cursor: pointer;
+                    padding: 10px 20px;
+                    transition: background-color 0.3s;
+                    &:hover {
+                        background-color: #f16d7f;
+                    }
+                }
+                .menu__subheading-h4 {
+                    padding-left: 20px;
+                    gap: 7px;
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #6f6e6e;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                    &:hover {
+                        background-color: #f16d7f;
+                    }
+                    &.active {
+                        background-color: #f16d7f;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .menu__subheading {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 14px;
+            color: #f16d7f;
+            margin-top: 24px;
+        }
     }
-    
-    #menu-toggle:checked~.menu {
-        right: 0;
-    }
+    /* конец  Header Desktop */
     /* Style breadcrumb Desktop */
     
     .breadcrumb {
@@ -212,7 +255,7 @@
         flex-direction: column;
         position: absolute;
         top: 40px;
-        left: 530px;
+        right: 500px;
         width: 631px;
         height: 334px;
         font-family: var(--font-family);
@@ -257,7 +300,8 @@
     .galka-svg {
         margin-right: 15px;
     }
-    /* Блок Subscribe Desktop */
+    /* конец slide  Desktop */
+    /* блок  Subscribe для Desktop */
     
     .subscribe {
         position: relative;
@@ -266,104 +310,97 @@
         align-items: center;
         min-height: 448px;
         gap: 30px;
-        background-image: url("./img/index/niz/subscribe svetl.jpg");
+        background-image: url("./img/niz/subscribe svetl.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         margin-left: auto;
         margin-right: auto;
+        .subscribe-left,
+        .subscribe-right {
+            position: relative;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .subscribe-left {
+            display: flex;
+            margin-top: 126px;
+            width: 359px;
+            height: 224px;
+            flex-direction: column;
+            align-items: center;
+            p {
+                padding-top: 30px;
+                font-weight: 400;
+                font-size: 20px;
+                text-align: center;
+                color: #222224;
+                font-style: italic;
+            }
+        }
+        .subscribe-right {
+            flex-direction: column;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 557px;
+            height: 142px;
+            gap: 15px;
+            margin-top: 150px;
+            h2 {
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 167%;
+                text-align: center;
+                color: #222224;
+            }
+            h3 {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 18px;
+                text-align: center;
+                color: #222224;
+            }
+        }
+        .subscribe-form {
+            display: flex;
+            width: 356px;
+            height: 49px;
+            &__input {
+                font-family: "Lato", sans-serif;
+                font-weight: 400;
+                font-size: 14px;
+                color: #222224;
+                opacity: 0.67;
+                width: 256px;
+                height: 49px;
+                padding-left: 16px;
+                background-color: #e1e1e1;
+                border-radius: 25px 0 0 25px;
+                border: none;
+            }
+            .btn-sub {
+                background-color: #f16d7f;
+                width: 100px;
+                height: 49px;
+                font-weight: 400;
+                font-size: 14px;
+                text-align: center;
+                color: #fff;
+                border-radius: 0 25px 25px 0;
+                border: none;
+                &:hover {
+                    cursor: pointer;
+                    background-color: #fff;
+                    color: #f26376;
+                    border: 1px solid #f26376;
+                }
+            }
+        }
     }
-    
-    .subscribe-left,
-    .subscribe-right {
-        position: relative;
-        z-index: 1;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
-    .subscribe-left {
-        display: flex;
-        margin-top: 126px;
-        width: 359px;
-        height: 224px;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .subscribe-left p {
-        padding-top: 30px;
-        font-weight: 400;
-        font-size: 20px;
-        text-align: center;
-        color: #222224;
-        font-style: italic;
-    }
-    
-    .subscribe-right {
-        flex-direction: column;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        width: 557px;
-        height: 142px;
-        gap: 15px;
-        margin-top: 150px;
-    }
-    
-    .subscribe-right-txt {
-        padding-bottom: 27px;
-    }
-    
-    .subscribe-right h2 {
-        font-family: var(--font-family);
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 167%;
-        text-align: center;
-        color: #222224;
-    }
-    
-    .subscribe-right h3 {
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: 18px;
-        text-align: center;
-        color: #222224;
-    }
-    
-    .subscribe-form {
-        display: flex;
-        width: 356px;
-        height: 49px;
-    }
-    
-    .subscribe-form__input {
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
-        font-size: 14px;
-        color: #222224;
-        opacity: 0.67;
-        width: 256px;
-        height: 49px;
-        padding-left: 16px;
-        background-color: #e1e1e1;
-        border-radius: 25px 0 0 25px;
-        border: none;
-    }
-    
-    .btn-sub {
-        background-color: #f16d7f;
-        width: 100px;
-        height: 49px;
-        font-weight: 400;
-        font-size: 14px;
-        text-align: center;
-        color: #fff;
-        border-radius: 0 25px 25px 0;
-        border: none;
-    }
-    /* Блок Footer  Desktop*/
+    /*  Footer  для  Desktop */
     
     .footer {
         display: flex;
@@ -373,133 +410,99 @@
         background-color: #222224;
         text-align: center;
         align-items: center;
-    }
-    
-    .footer-left {
-        display: flex;
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: 16px;
-        color: #fbfbfb;
-    }
-    
-    .footer-right ul {
-        display: flex;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        gap: 7px;
-    }
-    
-    .footer-right ul li a:hover {
-        background-color: #3f3dba;
-    }
-    /* ----------------------- Стили для планшетов ----------------------- */
-    
-    @media (min-width: 768px) and (max-width: 1140px) {
-        /* Body для планшетов */
-        body {
-            margin: 0 auto;
+        .footer-left {
+            display: flex;
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            color: #fbfbfb;
         }
+        .footer-right {
+            ul {
+                display: flex;
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                gap: 7px;
+                li a:hover {
+                    background-color: #3f3dba;
+                }
+            }
+        }
+    }
+    /* ----------------------- Styles для планшетов  Для разрешения от 1024px до 768px ----------------------- */
+    
+    @media (min-width: 768px) and (max-width: 1024px) {
         .center {
-            padding-left: calc(50% - 368px);
-            padding-right: calc(50% - 368px);
+            max-width: 768px;
         }
         .center2 {
-            padding-left: calc(50% - 384px);
-            padding-right: calc(50% - 384px);
+            max-width: 1024px;
         }
-        /* ----------------------- Header Styles для планшетов ----------------------- */
         .header {
-            margin: 0 auto;
-        }
-        .header-menu {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: rgba(34, 34, 34, 1);
-            height: 75px;
-        }
-        .menu-left {
-            margin-left: 32px;
-        }
-        .btn_hed-left {
-            border: none;
-            background-color: transparent;
-            padding: 41px;
-            cursor: pointer;
-        }
-        .menu-right {
-            display: flex;
-            justify-content: flex-end;
-            padding-right: 32px;
-            gap: 22px;
-        }
-        .btn_hed-right {
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
+            padding: 10px;
         }
         /* ----------------------- Style main Челдобрек для планшетов ----------------------- */
         .main {
-            margin: 0 auto;
+            /* margin: 0 auto; */
+            .content {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                background-color: rgba(241, 228, 230, 1);
+                align-items: center;
+                .mainContent-right-solid {
+                    white-space: nowrap;
+                }
+                .content-left-img {
+                    margin: 0 !important;
+                    content: url('../App/img/index/Men tabl.png');
+                    width: 386px;
+                    height: 368px;
+                    justify-self: start;
+                }
+            }
+            .main-h1 {
+                font-weight: 900;
+                font-size: 44px;
+                color: #222;
+            }
+            .main-p {
+                display: inline;
+                font-weight: 700;
+                font-size: 24px;
+                color: #222;
+            }
+            .fashion {
+                font-weight: 700;
+                font-size: 32px;
+                display: inline;
+                color: #f16d7f;
+                margin-left: 14px;
+            }
         }
-        .content {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            background-color: rgba(241, 228, 230, 1);
-            align-items: center;
-        }
-        .content-left-img {
-            width: 386px;
-            height: 368px;
-            padding: 0 auto;
-            margin: 0 auto;
-        }
-        .mainContent-right-solid {
-            white-space: nowrap;
-        }
-        .main-h1 {
-            font-weight: 900px;
-            font-size: 44px;
-            color: #222;
-        }
-        .main-p {
-            display: inline;
-            font-weight: 700;
-            font-size: 24px;
-            color: #222;
-        }
-        .fashion {
-            font-weight: 700;
-            font-size: 32px;
-            display: inline;
-            color: #f16d7f;
-            margin-left: 14px;
-        }
-        /* ----------------------- Style offer для планшетов ----------------------- */
-        .offer {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            grid-gap: 30px;
-        }
+    }
+    /* ----------------------- Style offer для планшетов ----------------------- */
+    
+    .offer {
+        padding: 18px 16px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 30px;
         .offer-cart-verh,
         .offer-cart.dlin {
             position: relative;
             overflow: hidden;
-        }
-        .offer-cart-verh img,
-        .offer-cart.dlin img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: opacity 0.3s ease;
-            opacity: 0.5;
-        }
-        .offer-cart-verh:hover img,
-        .offer-cart.dlin:hover img {
-            opacity: 1;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: opacity 0.3s ease;
+                opacity: 0.5;
+            }
+            &:hover img {
+                opacity: 1;
+            }
         }
         .cartStyleV,
         .cartStyleD {
@@ -512,127 +515,130 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-        }
-        .cartStyleV img,
-        .cartStyleD img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.5;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.5;
+            }
         }
         .offer-cart-txt {
             position: relative;
             text-align: center;
             color: #fff;
             z-index: 1;
-        }
-        .offer-cart-txt h3 {
-            font-weight: 400;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-        .offer-cart-txt h2 {
-            font-weight: 700;
-            font-size: 24px;
-            color: #f16d7f;
+            h3 {
+                font-weight: 400;
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            h2 {
+                font-weight: 700;
+                font-size: 24px;
+                color: #f16d7f;
+            }
         }
         .offer-cart.dlin {
             grid-column: span 3;
             height: 180px;
         }
-        /* ----------------------- Style products для планшетов ----------------------- */
-        .products {
-            margin-left: auto;
-            margin-right: auto;
-            justify-content: center;
-        }
+    }
+    /* ----------------------- Style products для планшетов ----------------------- */
+    
+    .products {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
         .products-text {
             text-align: center;
             margin-bottom: 48px;
+            h2 {
+                font-weight: 400;
+                font-size: 30px;
+                color: #222;
+            }
+            p {
+                font-weight: 400;
+                font-size: 14px;
+                color: #9f9f9f;
+            }
         }
-        .products-text h2 {
-            font-weight: 400;
-            font-size: 30px;
-            color: #222;
-        }
-        .products-text p {
-            font-weight: 400;
-            font-size: 14px;
-            color: #9f9f9f;
-        }
-        .products-title h2 {
-            font-size: 30px;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-        .products-title p {
-            font-size: 14px;
-            color: #9f9f9f;
+        .products-title {
+            h2 {
+                font-size: 30px;
+                font-weight: 700;
+                margin-bottom: 6px;
+            }
+            p {
+                font-size: 14px;
+                color: #9f9f9f;
+            }
         }
         .product-cart {
             display: grid;
             grid-template: repeat(3, 1fr) / repeat(2, 1fr);
             grid-gap: 30px;
-            justify-items: center
+            justify-items: center;
+            .prod-cart {
+                background-color: #f8f8f8;
+                text-align: left;
+                width: 360px;
+                height: 581px;
+                img {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 24px;
+                }
+                h3 {
+                    font-size: 13px;
+                    font-weight: 400;
+                    margin-bottom: 12px;
+                    color: #000;
+                }
+                p {
+                    font-size: 14px;
+                    color: #5d5d5d;
+                    font-weight: 300;
+                    margin-bottom: 18px;
+                }
+                h2 {
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #f16d7f;
+                }
+                .btn-product {
+                    display: flex;
+                    width: 212px;
+                    height: 48px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #f26376;
+                    border: 1px solid #f26376;
+                    cursor: pointer;
+                    justify-content: center;
+                    margin-top: 33px;
+                }
+                .btn-prd {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
         }
-        .prod-cart {
-            background-color: #f8f8f8;
-            text-align: left;
-            width: 360px;
-            height: 581px;
-        }
-        .prod-cart img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 24px;
-        }
-        .prod-cart h3 {
-            font-size: 13px;
-            font-weight: 400;
-            margin-bottom: 12px;
-            color: #000;
-        }
-        .prod-cart p {
-            font-size: 14px;
-            color: #5d5d5d;
-            font-weight: 300;
-            margin-bottom: 18px;
-        }
-        .prod-cart h2 {
-            font-weight: 400;
-            font-size: 16px;
-            color: #f16d7f;
-        }
-        .btn-product {
-            display: flex;
-            width: 212px;
-            height: 48px;
-            font-weight: 400;
-            font-size: 16px;
-            color: #f26376;
-            border: 1px solid #f26376;
-            cursor: pointer;
-            justify-content: center;
-            margin-top: 33px;
-        }
-        .btn-prd {
-            display: flex;
-            justify-content: center;
-        }
-        /* ----------------------- Style Блок Feature для планшетов ----------------------- */
-        .feature {
-            margin-top: 65px;
-            height: auto;
-            background-color: #222224;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 48px;
-        }
+    }
+    /* ----------------------- Style Блок Feature для планшетов ----------------------- */
+    
+    .feature {
+        margin-top: 65px;
+        height: auto;
+        background-color: #222224;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
         .feature-cart {
             display: flex;
             flex-direction: column;
@@ -642,63 +648,62 @@
             height: auto;
             padding-top: 0;
             padding-bottom: 0;
+            &:first-child {
+                padding-top: 48px;
+            }
+            &:last-child {
+                padding-bottom: 40px;
+            }
+            h2 {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 19px;
+                color: #fbfbfb;
+                padding-top: 28px;
+                padding-bottom: 16px;
+                text-align: center;
+            }
+            p {
+                font-family: var(--font-family);
+                font-weight: 300;
+                font-size: 13px;
+                text-align: center;
+                color: #fbfbfb;
+                height: auto;
+            }
         }
-        .feature-cart:first-child {
-            padding-top: 48px;
-        }
-        .feature-cart:last-child {
-            padding-bottom: 40px;
-        }
-        .feature-cart h2 {
-            font-family: var(--font-family);
-            font-weight: 400;
-            font-size: 19px;
-            color: #fbfbfb;
-            padding-top: 28px;
-            padding-bottom: 16px;
-            text-align: center;
-        }
-        .feature-cart p {
-            font-family: var(--font-family);
-            font-weight: 300;
-            font-size: 13px;
-            text-align: center;
-            color: #fbfbfb;
-            height: auto;
-        }
-        /* ----------------------- Style Блок Subscribe для планшетов ----------------------- */
-        .subscribe {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 768px;
-            gap: 48px;
-            background-image: url("./img/niz/sub svetl tab.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            max-width: 1140px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    }
+    /* ----------------------- Style Блок Subscribe для планшетов ----------------------- */
+    
+    .subscribe {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 768px;
+        gap: 48px;
+        background-image: url("./img/niz/sub svetl tab.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        max-width: 1140px;
+        margin-left: auto;
+        margin-right: auto;
         .subscribe-left,
         .subscribe-right {
             position: static;
             z-index: 1;
             transform: none;
-        }
-        .subscribe-left {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
             height: auto;
             margin-top: 0;
-        }
-        .subscribe-left p {
-            padding-top: 32px;
+            p {
+                padding-top: 32px;
+            }
         }
         .subscribe-right {
             flex-direction: column;
@@ -714,16 +719,17 @@
             width: 356px;
             height: 49px;
         }
-        /* ----------------------- Style Блок Footer для планшетов ----------------------- */
-        .footer {
-            display: flex;
-            justify-content: space-evenly;
-            height: 79px;
-            margin: 0 auto;
-            background-color: #222224;
-            text-align: center;
-            align-items: center;
-        }
+    }
+    /* ----------------------- Style Блок Footer для планшетов ----------------------- */
+    
+    .footer {
+        display: flex;
+        justify-content: space-evenly;
+        height: 79px;
+        margin: 0 auto;
+        background-color: #222224;
+        text-align: center;
+        align-items: center;
         .footer-left {
             display: flex;
             font-family: var(--font-family);
@@ -731,353 +737,20 @@
             font-size: 16px;
             color: #fbfbfb;
         }
-        .footer-right ul {
-            display: flex;
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            gap: 7px;
-        }
-        .footer-right ul li a:hover {
-            background-color: #3f3dba;
+        .footer-right {
+            ul {
+                display: flex;
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                gap: 7px;
+                li a:hover {
+                    background-color: #3f3dba;
+                }
+            }
         }
     }
     /* ************************ Стили для Смартов ************************ */
+    /* ************************ Style Header для смартфонов ************************ */
     
-    @media (max-width: 767px) {
-        /*  ************************ Body для Смартов ************************ */
-        body {
-            margin: 0 auto;
-        }
-        .center {
-            padding-left: calc(50% - 368px);
-            padding-right: calc(50% - 368px);
-        }
-        .center2 {
-            padding-left: calc(50% - 384px);
-            padding-right: calc(50% - 384px);
-        }
-        /* ************************ Style Header для смартфонов ************************ */
-        .header {
-            margin: 0px auto;
-            display: flex;
-        }
-        .header-menu {
-            display: flex;
-            align-items: center;
-            background-color: rgba(34, 34, 34, 1);
-            height: 75px;
-            justify-content: space-between;
-        }
-        .menu-left {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            margin-left: 10px;
-        }
-        .btn_hed-left {
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
-        }
-        .menu-right {
-            display: flex;
-            justify-content: flex-end;
-            gap: 10px;
-            padding: 25px;
-        }
-        .menu-right .btn_hed-right:nth-child(2),
-        .menu-right .btn_hed-right:nth-child(3) {
-            display: none;
-        }
-        .btn_hed-right {
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
-        }
-        /* ************************ Style Main Content для смартфонов ************************ */
-        .main {
-            display: flex;
-            justify-content: center;
-        }
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .content-left-img {
-            display: none;
-            /* скрываем блок на смартфонах */
-        }
-        .mainContent-right-solid {
-            background-color: #f1e4e6;
-            width: 100%;
-            height: 363px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-left: none !important;
-        }
-        .mainContent-txt {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            margin: 50px;
-        }
-        .main-h1 {
-            font-weight: 900;
-            font-size: 38px;
-            line-height: 46px;
-            color: #222222;
-        }
-        .main-p {
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 24px;
-            color: #222222;
-        }
-        .fashion {
-            color: #f16d7f;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 24px;
-        }
-        /* ************************ Style Блок Offer для смартфонов ************************ */
-        .offer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
-            padding: 32px 16px;
-            background-color: #fff;
-            padding: 16px 0;
-        }
-        .product-cart {
-            margin-top: 65px;
-            grid-template-columns: repeat(1, 1fr);
-        }
-        .offer-cart-verh {
-            position: relative;
-            width: 100%;
-            max-width: 343px;
-            height: 247px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .offer-cart-verh img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .offer-cart.dlin {
-            height: 111px;
-            width: 343px;
-        }
-        .cartStyleV,
-        .cartStyleD {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-image: url('./App/img/dark-overlay.png');
-            background-size: cover;
-            background-position: center;
-        }
-        .offer-cart-txt {
-            text-align: center;
-            color: #ffffff;
-            margin-top: 16px;
-        }
-        .offer-cart-txt h3 {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 19px;
-        }
-        .offer-cart-txt h2 {
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 29px;
-        }
-        /* ************************ Style products для смартфонов ************************ */
-        .products {
-            margin-left: auto;
-            margin-right: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .products-text {
-            text-align: center;
-            margin-bottom: 32px;
-        }
-        .products-text h2 {
-            font-weight: 400;
-            font-size: 24px;
-            color: #222;
-        }
-        .products-text p {
-            font-weight: 400;
-            font-size: 14px;
-            color: #9f9f9f;
-        }
-        .products-title {
-            text-align: center;
-        }
-        .products-title h2 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-        .products-title p {
-            font-size: 14px;
-            color: #9f9f9f;
-        }
-        .prod-cart {
-            background-color: #f8f8f8;
-            text-align: left;
-            height: auto;
-        }
-        .prod-cart img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 16px;
-        }
-        .prod-cart h3 {
-            font-size: 13px;
-            font-weight: 400;
-            margin-bottom: 12px;
-            color: #000;
-            padding: 0;
-        }
-        /* ************************ Style feature для смартфонов ************************ */
-        .feature {
-            margin-top: 65px;
-            height: auto;
-            background-color: #222224;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 48px;
-        }
-        .feature-cart {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 359px;
-            height: auto;
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-        .feature-cart:first-child {
-            padding-top: 48px;
-        }
-        .feature-cart:last-child {
-            padding-bottom: 40px;
-        }
-        .feature-cart h2 {
-            font-family: var(--font-family);
-            font-weight: 400;
-            font-size: 19px;
-            color: #fbfbfb;
-            padding-top: 28px;
-            padding-bottom: 16px;
-            text-align: center;
-        }
-        .feature-cart p {
-            font-family: var(--font-family);
-            font-weight: 300;
-            font-size: 13px;
-            text-align: center;
-            color: #fbfbfb;
-            height: auto;
-        }
-        /* ************************ Style Блок Subscribe для смартфонов ************************ */
-        .subscribe {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 768px;
-            gap: 48px;
-            background-image: url("./img/niz/sub svetl tab.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            max-width: 1140px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .subscribe-left,
-        .subscribe-right {
-            position: static;
-            z-index: 1;
-            transform: none;
-        }
-        .subscribe-left {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            height: auto;
-            margin-top: 0;
-        }
-        .subscribe-left p {
-            padding-top: 32px;
-            width: 350px;
-            height: 194px;
-        }
-        .subscribe-right {
-            flex-direction: column;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: auto;
-            gap: 32px;
-            margin-top: 0;
-        }
-        .subscribe-form {
-            width: 356px;
-            height: 49px;
-        }
-        /* ************************ Style Блок Footer для смартфонов ************************  */
-        .footer {
-            display: flex;
-            flex-direction: column-reverse;
-            justify-content: space-evenly;
-            height: 143px;
-            margin: 0 auto;
-            background-color: #222224;
-            text-align: center;
-            align-items: center;
-        }
-        .footer-left {
-            display: flex;
-            font-family: var(--font-family);
-            font-weight: 400;
-            font-size: 16px;
-            color: #fbfbfb;
-        }
-        .footer-right ul {
-            display: flex;
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            gap: 7px;
-        }
-        .footer-right ul li a:hover {
-            background-color: #f16d7f;
-        }
-    }
+    @media (min-width: 320px) and (max-width: 767px) {}

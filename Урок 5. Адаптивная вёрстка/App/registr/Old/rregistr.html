@@ -1,103 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Домашнее задание
+Урок 4. Методология БЭМ
+1. Создать страницу регистрации
+2. Использовать препроцессоры
+3. Добавлять эффекты наведения на все кнопки и ссылки
+4. Добавлять плавность перехода при наведении на элементы
+5. Адаптив создавать не нужно, только десктопную версию -->
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=LastResort&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="Registr-style.css" />
+    <link rel="stylesheet" href="./App/registr-style.css" />
+
     <title>Registration</title>
   </head>
-  <!-- Домашнее задание
-Макет https://www.figma.com/file/mnLY69cYE5cqWM5w6n5hXx/Seo-%26-Digital-Marketing-Landing-Page?node-id=190%3A1194 
-
-1.	Создать планшетную версию для всех 5 страниц интернет-магазина
-2. Проверить работу сайта на разрешении 768px
-3. Проверить работу сайта на разрешении 1024 px -->
 
   <body>
-    <!-- header -->
-
-    <header class="header center">
-      <div class="menu-left">
-        <a href="#"><img src="../img/Logo header.png" alt="Logo header.png" /></a>
-        <img class="btn_hed-left" src="../img/lupa.svg" alt="lupa.svg" />
-      </div>
-      <nav class="menu-center">
-        <ul>
-          <li><a href="../../index.html">Главная</a></li>
-          <li><a href="../catalog/Catalog.html">Каталог</a></li>
-          <li><a href="../prod/Product.html">Продукт</a></li>
-          <li><a href="../cart/Cart.html">Корзина</a></li>
-          <li><a href="../registr/Registr.html">Регистрация</a></li>
-        </ul>
-      </nav>
-      <div class="menu-right">
-        <button id="menu-toggle-button" class="btn-menu">
-          <img class="img-right" src="../img/menu right menu.svg" alt="right 1-1.svg" />
-        </button>
-        <img class="img-right" src="../img/menu right 1-2.svg" alt="right 1-2.svg" />
-        <img class="img-right" src="../img/menu right 1-3.svg" alt="right 1-3.svg" />
-      </div>
-      <div class="dropdown-menu" id="dropdown-menu">
-        <h2 class="menu__heading">MENU</h2>
-        <h3 class="menu__subheading">MAN</h3>
-        <ul class="menu__ul">
-          <li>
-            <h4 class="menu__subheading-h4">Accessories</h4>
-          </li>
-          <li>
-            <h4 class="menu__subheading-h4">Bags</h4>
-          </li>
-          <li>
-            <h4 class="menu__subheading-h4">Denim</h4>
-          </li>
-          <li>
-            <h4 class="menu__subheading-h4">T-Shirts</h4>
-          </li>
-        </ul>
-        <h4 class="menu__subheading">WOMAN</h4>
-        <ul class="menu__ul">
-          <li>
-            <h4 class="menu__subheading-h4">Accessories</h4>
-          </li>
-          <li>
-            <h4 class="menu__subheading-h4">Jackets &amp; Coats</h4>
-          </li>
-          <li>
-            <h4 class="menu__subheading-h4">Polos</h4>
-          </li>
-          <li>
-            <h4 class="menu__subheading-h4">T-Shirts</h4>
-          </li>
-          <li>
-            <h4 class="menu__subheading-h4">Shirts</h4>
-          </li>
-        </ul>
-        <h5 class="menu__subheading">KIDS</h5>
-        <ul class="menu__ul">
-          <li>
-            <h4 class="menu__subheading-h4">Accessories</h4>
-          </li>
-          <li>
-            <h4 class="menu__subheading-h4">Jackets &amp; Coats</h4>
-          </li>
-          <li>
-            <h4 class="menu__subheading-h4">Polos</h4>
-          </li>
-          <li>
-            <h4 class="menu__subheading-h4">T-Shirts</h4>
-          </li>
-          <li>
-            <h4 class="menu__subheading-h4">Shirts</h4>
-          </li>
-          <li>
-            <h4 class="menu__subheading-h4">Bags</h4>
-          </li>
-        </ul>
+    <!--  header Registration  -->
+    <header class="header center2">
+      <div class="header-menu center">
+        <div class="menu-left center">
+          <a href="#"><img src="./App/img/index/Logo header.png" alt="Logo header.png" /></a>
+          <img class="img_hed-left" src="./App/img/index/lupa.svg" alt="lupa.svg" />
+        </div>
+        <div class="menu-right">
+          <img class="img_hed-right" src="./App/img/index/menu right menu.svg" alt="right 1-1.svg" />
+          <img class="img_hed-right" src="./App/img/index/menu right 1-2.svg" alt="right 1-2.svg" />
+          <img class="img_hed-right" src="./App/img/index/menu right 1-3.svg" alt="right 1-3.svg" />
+        </div>
       </div>
     </header>
-    <!-- конец header -->
     <!--   breadcrumb Registration -->
     <section class="breadcrumb center2">
       <div class="breadcrumb-text center">
@@ -168,23 +103,23 @@
           </div>
           <div class="block-text">
             <div class="right-stroka">
-              <img class="galka-svg" src="../img/Galka.svg" alt="Galka.svg" />
+              <img class="galka-svg" src="./App/img/Galka.svg" alt="Galka.svg" />
               <p class="text">15% off welcome offer</p>
             </div>
             <div class="right-stroka">
-              <img class="galka-svg" src="../img/Galka.svg" alt="Galka.svg" />
+              <img class="galka-svg" src="./App/img/Galka.svg" alt="Galka.svg" />
               <p class="text">Free shipping, returns and exchanges on all orders</p>
             </div>
             <div class="right-stroka">
-              <img class="galka-svg" src="../img/Galka.svg" alt="Galka.svg" />
+              <img class="galka-svg" src="./App/img/Galka.svg" alt="Galka.svg" />
               <p class="text">$10 off a purchase on your birthday</p>
             </div>
             <div class="right-stroka">
-              <img class="galka-svg" src="../img/Galka.svg" alt="Galka.svg" />
+              <img class="galka-svg" src="./App/img/Galka.svg" alt="Galka.svg" />
               <p class="text">Early access to products</p>
             </div>
             <div class="right-stroka">
-              <img class="galka-svg" src="../img/Galka.svg" alt="Galka.svg" />
+              <img class="galka-svg" src="./App/img/Galka.svg" alt="Galka.svg" />
               <p class="text">Exclusive offers &amp; rewards</p>
             </div>
           </div>
@@ -192,12 +127,11 @@
       </div>
     </section>
     <!--  Конец блока slide Registration  -->
-
     <!--  Блок Subscribe -->
 
     <section class="subscribe center2">
       <div class="subscribe-left">
-        <img src="../img/niz/Golova-madam.png" alt="Golova-babi.png" />
+        <img src="./App/img/index/niz/Golova-madam.png" alt="Golova-babi.png" />
         <p>"Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum"</p>
       </div>
       <div class="subscribe-right">
@@ -215,27 +149,20 @@
     </section>
 
     <!--  Блок Footer -->
-    <footer class="footer center">
+    <footer class="footer center2">
       <div class="footer-left">
         <p>© 2023 Brand All Rights Reserved.</p>
       </div>
       <div class="footer-right">
         <ul>
           <li>
-            <a href="#"><img src="../img/niz/1.svg" alt="1.svg" /></a>
+            <a href="#"><img src="./App/img/index/niz/3.svg" alt="3.svg" /></a>
           </li>
           <li>
-            <a href="#"><img src="../img/niz/2.svg" alt="2.svg" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="../img/niz/3.svg" alt="3.svg" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="../img/niz/4.svg" alt="4.svg" /></a>
+            <a href="#"><img src="./App/img/index/niz/4.svg" alt="4.svg" /></a>
           </li>
         </ul>
       </div>
     </footer>
-    <script src="Registr-script.js"></script>
   </body>
 </html>

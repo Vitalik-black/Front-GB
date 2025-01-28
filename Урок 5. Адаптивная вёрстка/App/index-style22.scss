@@ -1,0 +1,970 @@
+    @font-face {
+            font-family: "Lato";
+            src: url(./Lato/Lato-Black.ttf);
+        }
+        
+        // Global Styles
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: "Lato", sans-serif, sans-serif;
+        }
+        
+        .center {
+            padding-left: calc(50% - 570px);
+            padding-right: calc(50% - 570px);
+        }
+        
+        .center2 {
+            padding-left: calc(50% - 800px);
+            padding-right: calc(50% - 800px);
+        }
+        /* ----------------------- Styles для планшетов  Для разрешения от 1024px до 768px ----------------------- */
+        
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .center {
+                max-width: 768px;
+            }
+            .center2 {
+                max-width: 1024px;
+            }
+            /* -----------------------  Heder для планшетов  ----------------------- */
+            /* //////////////////////////////////////////////////////////////////
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Style Header для планшетов */
+            .header {
+                height: 60px;
+                /* Уменьшение высоты для планшетов */
+                .menu-left {
+                    gap: 30px;
+                    /* Уменьшение расстояния между элементами */
+                }
+                .menu-center {
+                    ul {
+                        gap: 15px;
+                        /* Уменьшение расстояния между пунктами меню */
+                    }
+                }
+                .menu-right {
+                    gap: 5px;
+                    /* Уменьшение расстояния между элементами */
+                }
+            }
+            /* Style Main для планшетов */
+            .main {
+                .main-h1 {
+                    font-size: 36px;
+                    /* Уменьшение размера шрифта для заголовка */
+                }
+                .main-p {
+                    font-size: 24px;
+                    /* Уменьшение размера шрифта для параграфа */
+                }
+            }
+            /* Style Offer для планшетов */
+            .offer {
+                grid-template-columns: repeat(2, 1fr);
+                /* Изменение на 2 колонки */
+                padding-top: 32px;
+                /* Уменьшение отступов */
+                padding-bottom: 64px;
+                .offer-cart-verh,
+                .offer-cart.dlin {
+                    img {
+                        height: auto;
+                        /* Подстройка высоты для адаптивности */
+                    }
+                }
+                .offer-cart.dlin {
+                    grid-column: span 2;
+                    /* Занимает всю ширину */
+                }
+            }
+            /* Style Products для планшетов */
+            .product-cart {
+                grid-template: repeat(2, 1fr);
+                /* Изменение на 2 колонки */
+                grid-gap: 20px;
+                /* Уменьшение промежутков между элементами */
+                .prod-cart {
+                    width: auto;
+                    /* Уменьшение фиксированной ширины */
+                    height: auto;
+                    /* Уменьшение фиксированной высоты */
+                    .image-container {
+                        height: 300px;
+                        /* Уменьшение высоты изображения */
+                    }
+                }
+            }
+            /* блок Feature для планшетов */
+            .feature {
+                flex-direction: column;
+                /* Изменение на колонку */
+                height: auto;
+                /* Автоматическая высота */
+                gap: 20px;
+                /* Уменьшение промежутков между элементами */
+                .feature-cart {
+                    width: 100%;
+                    /* Занимает всю ширину */
+                    height: auto;
+                    /* Автоматическая высота */
+                }
+            }
+            /* блок Subscribe для планшетов */
+            .subscribe {
+                flex-direction: column;
+                /* Изменение на колонку */
+                min-height: auto;
+                /* Автоматическая высота */
+                .subscribe-left {
+                    width: 100%;
+                    /* Занимает всю ширину */
+                }
+                .subscribe-right {
+                    width: 100%;
+                    /* Занимает всю ширину */
+                }
+                .subscribe-form {
+                    flex-direction: column;
+                    /* Изменение на колонку */
+                    width: auto;
+                    /* Автоматическая ширина */
+                    &__input {
+                        width: 100%;
+                        /* Занимает всю ширину */
+                    }
+                }
+            }
+            /* Footer для планшетов */
+            .footer {
+                flex-direction: column;
+                /* Изменение на колонку */
+                height: auto;
+                /* Автоматическая высота */
+                .footer-left {
+                    margin-bottom: 10px;
+                    /* Отступ снизу */
+                }
+                .footer-right {
+                    ul {
+                        flex-direction: column;
+                        /* Изменение на колонку */
+                        gap: 5px;
+                        /* Уменьшение промежутков между элементами */
+                    }
+                }
+            }
+        }
+        /* ----------------------- Styles для мобильных устройств ----------------------- */
+        
+        */
+        /* ----------------------- Style main Челдобрек для планшетов ----------------------- */
+        
+        .main {
+            /* margin: 0 auto; */
+            .content {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                background-color: rgba(241, 228, 230, 1);
+                align-items: center;
+                .mainContent-right-solid {
+                    white-space: nowrap;
+                }
+                .content-left-img {
+                    margin: 0 !important;
+                    content: url('../App/img/index/Men tabl.png');
+                    width: 386px;
+                    height: 368px;
+                    justify-self: start;
+                }
+            }
+            .main-h1 {
+                font-weight: 900;
+                font-size: 44px;
+                color: #222;
+            }
+            .main-p {
+                display: inline;
+                font-weight: 700;
+                font-size: 24px;
+                color: #222;
+            }
+            .fashion {
+                font-weight: 700;
+                font-size: 32px;
+                display: inline;
+                color: #f16d7f;
+                margin-left: 14px;
+            }
+        }
+        /* ----------------------- Style offer для планшетов ----------------------- */
+        
+        .offer {
+            padding: 18px 16px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 30px;
+            margin: 0 auto;
+            max-width: 1140px;
+            .offer-cart-verh,
+            .offer-cart.dlin {
+                position: relative;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: opacity 0.3s ease;
+                    opacity: 0.5;
+                }
+                &:hover img {
+                    opacity: 1;
+                }
+            }
+            .cartStyleV,
+            .cartStyleD {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 0.5;
+                }
+            }
+            .offer-cart-txt {
+                position: relative;
+                text-align: center;
+                color: #fff;
+                z-index: 1;
+                h3 {
+                    font-weight: 400;
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+                h2 {
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: #f16d7f;
+                }
+            }
+            .offer-cart.dlin {
+                grid-column: span 3;
+                height: 180px;
+            }
+        }
+        /* ----------------------- Style products для планшетов ----------------------- */
+        
+        .products {
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            .products-text {
+                text-align: center;
+                margin-bottom: 48px;
+                h2 {
+                    font-weight: 400;
+                    font-size: 30px;
+                    color: #222;
+                }
+                p {
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #9f9f9f;
+                }
+            }
+            .products-title {
+                h2 {
+                    font-size: 30px;
+                    font-weight: 700;
+                    margin-bottom: 6px;
+                }
+                p {
+                    font-size: 14px;
+                    color: #9f9f9f;
+                }
+            }
+            .product-cart {
+                display: grid;
+                grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+                grid-gap: 30px;
+                justify-items: center;
+                .prod-cart {
+                    background-color: #f8f8f8;
+                    text-align: left;
+                    width: 360px;
+                    height: 581px;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        margin-bottom: 24px;
+                    }
+                    h3 {
+                        font-size: 13px;
+                        font-weight: 400;
+                        margin-bottom: 12px;
+                        color: #000;
+                    }
+                    p {
+                        font-size: 14px;
+                        color: #5d5d5d;
+                        font-weight: 300;
+                        margin-bottom: 18px;
+                    }
+                    h2 {
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: #f16d7f;
+                    }
+                    .btn-product {
+                        display: flex;
+                        width: 212px;
+                        height: 48px;
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: #f26376;
+                        border: 1px solid #f26376;
+                        cursor: pointer;
+                        justify-content: center;
+                        margin-top: 33px;
+                    }
+                    .btn-prd {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+        /* ----------------------- Style Блок Feature для планшетов ----------------------- */
+        
+        .feature {
+            margin-top: 65px;
+            height: auto;
+            background-color: #222224;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            .feature-cart {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 300px;
+                height: auto;
+                padding-top: 0;
+                padding-bottom: 0;
+                &:first-child {
+                    padding-top: 48px;
+                }
+                &:last-child {
+                    padding-bottom: 40px;
+                }
+                h2 {
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 19px;
+                    color: #fbfbfb;
+                    padding-top: 28px;
+                    padding-bottom: 16px;
+                    text-align: center;
+                }
+                p {
+                    font-family: var(--font-family);
+                    font-weight: 300;
+                    font-size: 13px;
+                    text-align: center;
+                    color: #fbfbfb;
+                    height: auto;
+                }
+            }
+        }
+        /* ----------------------- Style Блок Subscribe для планшетов ----------------------- */
+        
+        .subscribe {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 768px;
+            gap: 48px;
+            background-image: url("./img/niz/sub svetl tab.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            max-width: 1140px;
+            margin-left: auto;
+            margin-right: auto;
+            .subscribe-left,
+            .subscribe-right {
+                position: static;
+                z-index: 1;
+                transform: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                height: auto;
+                margin-top: 0;
+                p {
+                    padding-top: 32px;
+                }
+            }
+            .subscribe-right {
+                flex-direction: column;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: auto;
+                gap: 32px;
+                margin-top: 0;
+            }
+            .subscribe-form {
+                width: 356px;
+                height: 49px;
+            }
+        }
+        /* ----------------------- Style Блок Footer для планшетов ----------------------- */
+        
+        .footer {
+            display: flex;
+            justify-content: space-evenly;
+            height: 79px;
+            margin: 0 auto;
+            background-color: #222224;
+            text-align: center;
+            align-items: center;
+            .footer-left {
+                display: flex;
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 16px;
+                color: #fbfbfb;
+            }
+            .footer-right {
+                ul {
+                    display: flex;
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    gap: 7px;
+                    li a:hover {
+                        background-color: #3f3dba;
+                    }
+                }
+            }
+        }
+    }
+    /* ************************ Стили для Смартов ************************ */
+    /* ************************ Style Header для смартфонов ************************ */
+    @media (min-width: 320px) and (max-width: 767px) {}
+    @media (min-width: 1025px) {
+        /* Style Header Desktop */
+        
+        .header {
+            position: relative;
+            margin: 0 auto;
+            background-color: rgba(34, 34, 34, 1);
+            height: 75px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .menu-left {
+                display: flex;
+                gap: 41px;
+                align-items: center;
+            }
+            .btn_hed-left {
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                margin-left: 15px;
+            }
+            .menu-center {
+                flex-grow: 1;
+                text-align: center;
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+                    li {
+                        a {
+                            text-decoration: none;
+                            color: white;
+                            padding: 10px 15px;
+                            transition: background-color 0.3s;
+                            &:hover {
+                                background-color: #f16d7f;
+                            }
+                        }
+                    }
+                }
+            }
+            .menu-right {
+                display: flex;
+                justify-content: flex-end;
+                gap: 10px;
+                .img-right {
+                    border: none;
+                    cursor: pointer;
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        
+        #menu-toggle-button {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #222;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            padding: 37px 73px 32px 33px;
+            width: 232px;
+            height: 639px;
+            background-color: #ffffff;
+            top: 100%;
+            right: 252px;
+            display: none;
+            z-index: 1000;
+            &.active {
+                display: block;
+            }
+            .menu__ul {
+                list-style: none;
+                li {
+                    margin: 10px 0;
+                    .subheading {
+                        font-family: var(--font-family);
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: #f16d7f;
+                        background-color: #3f3dba;
+                        cursor: pointer;
+                        padding: 10px 20px;
+                        transition: background-color 0.3s;
+                        &:hover {
+                            background-color: #f16d7f;
+                        }
+                    }
+                    .menu__subheading-h4 {
+                        padding-left: 20px;
+                        gap: 7px;
+                        font-family: var(--font-family);
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: #6f6e6e;
+                        cursor: pointer;
+                        transition: background-color 0.3s;
+                        &:hover {
+                            background-color: #f16d7f;
+                        }
+                        &.active {
+                            background-color: #f16d7f;
+                            color: white;
+                        }
+                    }
+                }
+            }
+            .menu__subheading {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 14px;
+                color: #f16d7f;
+                margin-top: 24px;
+            }
+        }
+        /* Style Main для Desktop */
+        
+        .main {
+            margin: 0 auto;
+            background-color: rgba(241, 228, 230, 1);
+            .content {
+                display: flex;
+                align-items: center;
+            }
+            .mainContent-right-solid {
+                border-left: 12px solid #f16d7f;
+            }
+            .main-h1 {
+                font-weight: 900;
+                font-size: 48px;
+                color: #222;
+                margin-left: 15px;
+            }
+            .main-p {
+                display: inline;
+                font-weight: 700;
+                font-size: 32px;
+                color: #222;
+                margin-left: 15px;
+            }
+            .fashion {
+                font-weight: 700;
+                font-size: 32px;
+                display: inline;
+                color: #f16d7f;
+                margin-left: 14px;
+            }
+        }
+        /* Style Offer для Desktop */
+        
+        .offer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding-top: 64px;
+            padding-bottom: 96px;
+            .offer-cart-verh,
+            .offer-cart.dlin {
+                position: relative;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: opacity 0.3s ease;
+                }
+                &:hover img {
+                    opacity: 1;
+                }
+            }
+            .cartStyleV,
+            .cartStyleD {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 0.5;
+                }
+            }
+            .offer-cart-txt {
+                position: relative;
+                text-align: center;
+                color: #fff;
+                z-index: 1;
+                h3 {
+                    font-weight: 400;
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+                h2 {
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: #f16d7f;
+                }
+            }
+            .offer-cart.dlin {
+                grid-column: span 3;
+            }
+        }
+        /* Style Products Desktop */
+        
+        .products-text {
+            text-align: center;
+            margin-bottom: 48px;
+            h2 {
+                font-weight: 400;
+                font-size: 30px;
+                color: #222;
+            }
+            p {
+                font-weight: 400;
+                font-size: 14px;
+                color: #9f9f9f;
+            }
+        }
+        
+        .product-cart {
+            display: grid;
+            grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+            grid-gap: 30px;
+            .prod-cart {
+                background-color: #f8f8f8;
+                text-align: left;
+                width: 360px;
+                height: 581px;
+                position: relative;
+                overflow: hidden;
+                .prod-cart-txt {
+                    margin-left: 16px;
+                    margin-top: 25px;
+                }
+                .image-container {
+                    position: relative;
+                    overflow: hidden;
+                    height: 420px;
+                    .main-image,
+                    .hover-image {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        transition: opacity 0.3s ease;
+                    }
+                    .hover-image {
+                        display: none;
+                        opacity: 1;
+                    }
+                }
+                &:hover {
+                    .hover-image {
+                        display: block;
+                    }
+                    .main-image {
+                        display: block;
+                    }
+                }
+                h3 {
+                    font-size: 13px;
+                    font-weight: 400;
+                    margin-bottom: 12px;
+                    color: #000;
+                }
+                p {
+                    font-size: 14px;
+                    color: #5d5d5d;
+                    font-weight: 300;
+                    margin-bottom: 18px;
+                }
+                h2 {
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #f16d7f;
+                }
+            }
+        }
+        
+        .btn-prd {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .btn-product {
+            display: flex;
+            width: 212px;
+            height: 48px;
+            font-weight: 400;
+            font-size: 16px;
+            color: #fff;
+            background-color: #f26376;
+            border: 1px solid #f26376;
+            cursor: pointer;
+            justify-content: center;
+            margin-top: 48px;
+            align-items: center;
+            &:hover {
+                background-color: #fff;
+                color: #f26376;
+            }
+        }
+        /* блок Feature для Desktop */
+        
+        .feature {
+            margin-top: 96px;
+            height: 341px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #222224;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            .feature-cart {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 360px;
+                height: 134px;
+                padding-bottom: 104px;
+                padding-top: 103px;
+                h2 {
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 19px;
+                    color: #fbfbfb;
+                    padding-top: 28px;
+                    padding-bottom: 16px;
+                }
+                p {
+                    font-family: var(--font-family);
+                    font-weight: 300;
+                    font-size: 13px;
+                    text-align: center;
+                    color: #fbfbfb;
+                    height: 34px;
+                }
+            }
+        }
+        /* блок  Subscribe для Desktop */
+        
+        .subscribe {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 448px;
+            gap: 30px;
+            background-image: url("./img/niz/subscribe svetl.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin-left: auto;
+            margin-right: auto;
+            .subscribe-left,
+            .subscribe-right {
+                position: relative;
+                z-index: 1;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .subscribe-left {
+                display: flex;
+                margin-top: 126px;
+                width: 359px;
+                height: 224px;
+                flex-direction: column;
+                align-items: center;
+                p {
+                    padding-top: 30px;
+                    font-weight: 400;
+                    font-size: 20px;
+                    text-align: center;
+                    color: #222224;
+                    font-style: italic;
+                }
+            }
+            .subscribe-right {
+                flex-direction: column;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                width: 557px;
+                height: 142px;
+                gap: 15px;
+                margin-top: 150px;
+                h2 {
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 167%;
+                    text-align: center;
+                    color: #222224;
+                }
+                h3 {
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 18px;
+                    text-align: center;
+                    color: #222224;
+                }
+            }
+            .subscribe-form {
+                display: flex;
+                width: 356px;
+                height: 49px;
+                &__input {
+                    font-family: "Lato", sans-serif;
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #222224;
+                    opacity: 0.67;
+                    width: 256px;
+                    height: 49px;
+                    padding-left: 16px;
+                    background-color: #e1e1e1;
+                    border-radius: 25px 0 0 25px;
+                    border: none;
+                }
+                .btn-sub {
+                    background-color: #f16d7f;
+                    width: 100px;
+                    height: 49px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-align: center;
+                    color: #fff;
+                    border-radius: 0 25px 25px 0;
+                    border: none;
+                    &:hover {
+                        cursor: pointer;
+                        background-color: #fff;
+                        color: #f26376;
+                        border: 1px solid #f26376;
+                    }
+                }
+            }
+        }
+        /*  Footer  для  Desktop */
+        
+        .footer {
+            display: flex;
+            justify-content: space-evenly;
+            height: 79px;
+            margin: 0 auto;
+            background-color: #222224;
+            text-align: center;
+            align-items: center;
+            .footer-left {
+                display: flex;
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 16px;
+                color: #fbfbfb;
+            }
+            .footer-right {
+                ul {
+                    display: flex;
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    gap: 7px;
+                    li a:hover {
+                        background-color: #3f3dba;
+                    }
+                }
+            }
+        }
+    }
