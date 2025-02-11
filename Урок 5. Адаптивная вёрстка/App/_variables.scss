@@ -7,20 +7,25 @@ $header-bg-color: #222224;
 $header-btn-bg-color: #F16D7F;
 $gray-color: #9F9F9F;
 $light-gray: #F8F8F8;
-
 // Переменные для шрифтов
-$lato-font: 'Lato', sans-serif;
-$main-font-stack: $lato-font, sans-serif;
-
+$lato-font: 'Lato',
+sans-serif;
+$main-font-stack: $lato-font,
+sans-serif;
 // Переменные для медиа-запросов
 $tablet-width: 768px;
 $mobile-width: 375px;
-
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-sm-max: 767px;
+$screen-md-max: 991px;
+$screen-lg-max: 1199px;
 // Переменные для отступов
 $menu-item-gap: 33px;
 $container-padding: 32px;
 $button-padding: 41px;
-
 // Другие общие переменные
 $container-width: 1140px;
 $header-height: 75px;
