@@ -15,7 +15,7 @@
 }
 
 
-/* ----------------------- Styles для планшетов  Для разрешения от 1024px до 768px ----------------------- */
+/* ----------------------- Styles для планшетов от 1024px до 768px ----------------------- */
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .center {
@@ -144,119 +144,88 @@
             margin-top: 24px;
         }
     }
-    /* -----------------------  конец стилий Heder для планшетов  ----------------------- */
+    /* -----------------------    Heder для планшетов  ----------------------- */
     /* Style Main для планшетов */
     .main {
         .main-h1 {
             font-size: 36px;
-            /* Уменьшение размера шрифта для заголовка */
         }
         .main-p {
             font-size: 24px;
-            /* Уменьшение размера шрифта для параграфа */
         }
     }
     /* Style Offer для планшетов */
     .offer {
         grid-template-columns: repeat(2, 1fr);
-        /* Изменение на 2 колонки */
         padding-top: 32px;
-        /* Уменьшение отступов */
         padding-bottom: 64px;
         .offer-cart-verh,
         .offer-cart.dlin {
             img {
                 height: auto;
-                /* Подстройка высоты для адаптивности */
             }
         }
         .offer-cart.dlin {
             grid-column: span 2;
-            /* Занимает всю ширину */
         }
     }
     /* Style Products для планшетов */
     .product-cart {
         grid-template: repeat(2, 1fr);
-        /* Изменение на 2 колонки */
         grid-gap: 20px;
-        /* Уменьшение промежутков между элементами */
         .prod-cart {
             width: auto;
-            /* Уменьшение фиксированной ширины */
             height: auto;
-            /* Уменьшение фиксированной высоты */
             .image-container {
                 height: 300px;
-                /* Уменьшение высоты изображения */
             }
         }
     }
     /* блок Feature для планшетов */
     .feature {
         flex-direction: column;
-        /* Изменение на колонку */
         height: auto;
-        /* Автоматическая высота */
         gap: 20px;
-        /* Уменьшение промежутков между элементами */
         .feature-cart {
             width: 100%;
-            /* Занимает всю ширину */
             height: auto;
-            /* Автоматическая высота */
         }
     }
     /* блок Subscribe для планшетов */
     .subscribe {
         flex-direction: column;
-        /* Изменение на колонку */
         min-height: auto;
-        /* Автоматическая высота */
         .subscribe-left {
             width: 100%;
-            /* Занимает всю ширину */
         }
         .subscribe-right {
             width: 100%;
-            /* Занимает всю ширину */
         }
         .subscribe-form {
             flex-direction: column;
-            /* Изменение на колонку */
             width: auto;
-            /* Автоматическая ширина */
             &__input {
                 width: 100%;
-                /* Занимает всю ширину */
             }
         }
     }
     /* Footer для планшетов */
     .footer {
         flex-direction: column;
-        /* Изменение на колонку */
         height: auto;
-        /* Автоматическая высота */
         .footer-left {
             margin-bottom: 10px;
-            /* Отступ снизу */
         }
         .footer-right {
             ul {
                 flex-direction: column;
-                /* Изменение на колонку */
                 gap: 5px;
-                /* Уменьшение промежутков между элементами */
             }
         }
     }
 }
 
 
-/* ----------------------- Styles для мобильных устройств ----------------------- */
-
-*/
 /* ----------------------- Style main Челдобрек для планшетов ----------------------- */
 
 .main {
