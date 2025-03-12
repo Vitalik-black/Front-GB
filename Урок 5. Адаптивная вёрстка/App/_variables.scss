@@ -13,19 +13,34 @@ sans-serif;
 $main-font-stack: $lato-font,
 sans-serif;
 // Переменные для медиа-запросов
-$tablet-width: 768px;
-$mobile-width: 375px;
-$screen-sm: 576px;
-$screen-md: 768px;
-$screen-lg: 992px;
-$screen-xl: 1200px;
-$screen-sm-max: 767px;
-$screen-md-max: 991px;
-$screen-lg-max: 1199px;
-// Переменные для отступов
-$menu-item-gap: 33px;
-$container-padding: 32px;
-$button-padding: 41px;
-// Другие общие переменные
-$container-width: 1140px;
-$header-height: 75px;
+// Переменные для размеров экранов
+$mobile-small: 375px;
+$mobile-medium: 425px;
+$tablet: 768px;
+$desktop-small: 1024px;
+$desktop-medium: 1600px;
+$desktop-large: 8000px;
+// Миксины для медиа запросов
+@mixin mobile-small-medium {
+    @media (min-width: #{$mobile-small}) and (max-width: #{$mobile-medium}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) and (max-width: #{$desktop-small - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop-small {
+    @media (min-width: #{$desktop-small}) and (max-width: #{$desktop-medium - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop-medium-large {
+    @media (min-width: #{$desktop-medium}) and (max-width: #{$desktop-large}) {
+        @content;
+    }
+}
